@@ -1,8 +1,6 @@
+import { ColorModeScript, UIProvider } from "@yamada-ui/react"
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "./_components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +13,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ja">
+      <body>
+        <ColorModeScript />
+        <UIProvider>
+          <Header />
+          <div>
+            {children}
+          </div>
+        </UIProvider>
+      </body>
     </html>
   );
 }
