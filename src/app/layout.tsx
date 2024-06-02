@@ -1,6 +1,6 @@
-import { ColorModeScript, UIProvider } from "@yamada-ui/react"
 import type { Metadata } from "next";
-import { Header } from "./_components/Header";
+import { Box, ColorModeScript, UIProvider } from "@yamada-ui/react"
+import { Header, Footer } from "./_components";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +18,10 @@ export default function RootLayout({
         <ColorModeScript />
         <UIProvider>
           <Header />
-          <div>
+          <Box mt="xl">
             {children}
-          </div>
+          </Box>
+          <Footer />
         </UIProvider>
       </body>
     </html>

@@ -1,10 +1,10 @@
 import { Box } from "@yamada-ui/react";
-import { LawSearch } from "./_components/LawSearch";
+import { Search } from "./_components/Search";
 
 export default function Laws() {
   return (
     <Box maxW="3xl" mx="auto">
-      <LawSearch />
+      <Search />
     </Box>
   )
 }
